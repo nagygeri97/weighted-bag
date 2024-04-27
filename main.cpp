@@ -19,7 +19,7 @@ void test(const std::string& testname, const WeightedBag<std::string, T>& wb, in
     for (const auto& [key, expected] : expectation) {
         double expected_rate = static_cast<double>(expected) / total;
         double actual_rate = static_cast<double>(counts[key]) / repetitions;
-        std::cout << key << ": Expected=" << expected_rate * 100 << " %, Actual=" << actual_rate * 100 << "%\n";
+        std::cout << key << ": Expected=" << expected_rate * 100 << "%, Actual=" << actual_rate * 100 << "%\n";
         assert(abs(expected_rate - actual_rate) < allowed_error);
     }
 
